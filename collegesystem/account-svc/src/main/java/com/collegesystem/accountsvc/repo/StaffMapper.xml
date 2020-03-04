@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.collegesystem.accountsvc.repo.StaffRepo">
+    <resultMap id="staffMap" type="com.collegesystem.accountsvc.model.Staff">
+        <id property="staffId" column="staff_id"></id>
+        <result property="firstName" column="first_name"></result>
+        <result property="lastName" column="last_name"></result>
+    </resultMap>
+    <select id="getStaffs" resultMap="staffMap">
+        SELECT staff_id,first_name,last_name from staff
+    </select>
+</mapper>
